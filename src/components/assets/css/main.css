@@ -1,0 +1,74 @@
+* {
+    font-family: 'Bitter', serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: .5vw;
+}
+
+::-webkit-scrollbar-track {
+    background: red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: blue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: green;
+}
+
+
+body {
+    background-color: black;
+}
+
+.banner {
+    position: relative;
+    z-index: -1;
+    height: 27vw;
+    width: auto;
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    margin-top: auto;
+    background-color: rgb(10, 10, 10);
+}
+
+.header {
+    padding-top: 10vw;
+    padding-bottom: 2.5vw;
+}
+
+.title {
+    color: rgb(182, 144, 87);
+    padding-top: 1vw;
+    padding-bottom: 2.5vw;
+    letter-spacing: 5px;
+}
+
+.textWall {
+    border: 5px solid rgb(182, 144, 87);
+    padding: 5px;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+@media screen and (max-width: 700px) {
+    .textWall {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .title {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+}
