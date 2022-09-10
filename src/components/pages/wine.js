@@ -1,9 +1,10 @@
 import React from 'react';
 import goldshire from '../assets/img/goldshire.jpg'
 import wine1 from '../assets/img/wine1.jpg'
+import wines from '../../js/connection.js'
 
 //Include links to purchasing wine through '/shop' route, include award winning releases, wine history, wineclub information and signup link, wineclub benefits, and inquiry about custom labels
-export default function winery() {
+export default function winery() { 
     return(
         <>
             <div class='bannerContainer'>
@@ -12,6 +13,16 @@ export default function winery() {
             </div>
 
             <div class='content'>
+
+                <ul>
+                    {wines.forEach((wine) => {
+                        return (
+                            <li>
+                                {{wine}}
+                            </li>
+                        )
+                    })}
+                </ul>
                 <h1 class='title'>Our Wines</h1>
                 <div class='textWall'>
                     <p>
