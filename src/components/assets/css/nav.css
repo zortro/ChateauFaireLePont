@@ -23,7 +23,17 @@
 }
 
 .menu {
-    padding-right: 3vw;
+    margin-right: 1vw;
+    width: 4vh;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.line {
+    background-color: white;
+    margin-bottom: 1.5vh;
+    height: 1px;
+    width: auto;
 }
 
 .navItems {
@@ -47,6 +57,31 @@
 
 .activeLink {
     color: rgb(129, 22, 36);
+}
+
+ .modal {
+    position: fixed;
+    margin: 10vh 0 0 75vw;
+    width: 25vw;
+    height: 96vh;
+    overflow: hidden;
+}
+
+.modalContent {
+    width: 25vw;
+    height: 100vh;
+    margin-top: -96vh;
+    position: fixed;
+    z-index: 1;
+}
+
+.modalBg {
+    background-color: black;
+    height: 100%;
+    width: auto;
+    opacity: 0.7;
+    position: relative;
+    z-index: -1;
 }
 
 @media screen and (max-width: 700px) {
