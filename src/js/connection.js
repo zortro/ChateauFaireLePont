@@ -1,17 +1,21 @@
-const handleConnection = async function(e, data) {
+const getWine = async (e) => {
     e.preventDefault();
 
     const baseurl = 'https://fairelepont.herokuapp.com/'
 
     const response = await fetch(`${baseurl}/wine/getWines`, {
         method: 'GET',
-        body: JSON.stringify(data),
-        headers: {'Content-Type': 'application/json'},
+        mode: 'cors'
     })
+    try {
+        const wine = await response.json()
+        console.log(wine)
 
-    const wines = await response.json();
-    console.log(wines)
-    return wines
+        return wine
+    } catch (err) {
+        console.log('error line 1 handleConnection(), connection.js')
+        console.log(err)
+    }
 }
 
-export { handleConnection }
+export default getWine

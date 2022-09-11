@@ -1,10 +1,24 @@
 import React from 'react';
 import goldshire from '../assets/img/goldshire.jpg'
 import wine1 from '../assets/img/wine1.jpg'
-import wines from '../../js/connection.js'
 
+/* //getWine
+import getWine from '../../js/connection.js' */
+let data = []
+async function getWine() {
+    await fetch('https://fairelepont.herokuapp.com/wine/getWine')
+    .then((response) => response.json())
+    .then((wine) => {
+        console.log(wine)
+        data = wine
+    })
+}
+
+getWine()
 //Include links to purchasing wine through '/shop' route, include award winning releases, wine history, wineclub information and signup link, wineclub benefits, and inquiry about custom labels
-export default function winery() { 
+export default function winery() {
+
+
     return(
         <>
             <div class='bannerContainer'>
@@ -15,10 +29,10 @@ export default function winery() {
             <div class='content'>
 
                 <ul>
-                    {wines.forEach((wine) => {
-                        return (
-                            <li>
-                                {{wine}}
+                    {data.forEach((thing) => {
+                        return(
+                            <li key={data.name}>
+                                {{data}}
                             </li>
                         )
                     })}
