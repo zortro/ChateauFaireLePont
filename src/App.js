@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Nav from './components/pages/nav.js'
-import Home from './components/pages/home.js'
-import Wine from './components/pages/wine.js'
-import Restaurant from './components/pages/dining.js'
-import Events from './components/pages/events.js'
-import Connect from './components/pages/contact.js'
-import Shop from './components/pages/shop.js'
+import NavigationBar from './components/pages/nav.js';
+import Home from './components/pages/home.js';
+import Wine from './components/pages/wine.js';
+import Restaurant from './components/pages/dining.js';
+import Events from './components/pages/events.js';
+import Connect from './components/pages/contact.js';
+import Shop from './components/pages/shop.js';
 
 import './App.css';
-import './components/assets/css/main.css'
+/* import './components/assets/css/main.css'; */
 
 //remember to include menu modal!!
 
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
 
     <BrowserRouter>
-      <Nav />
+      <NavigationBar />
           <Routes>
               <Route path='/' element={<Home />}/>
               <Route path='/Wine' element={<Wine />}/>
@@ -30,7 +30,7 @@ function App() {
     </BrowserRouter>
 
     </div>
-  );
-}
+  )
+};
 
 export default App;

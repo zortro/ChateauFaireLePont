@@ -1,21 +1,20 @@
-const getWine = async (e) => {
-    e.preventDefault();
+import { useState, useEffect } from 'react'
 
-    const baseurl = 'https://fairelepont.herokuapp.com/'
+export default function Get(ext, data) {
+    const [wineList, setWineList] = useState([])
 
-    const response = await fetch(`${baseurl}/wine/getWines`, {
-        method: 'GET',
-        mode: 'cors'
-    })
-    try {
-        const wine = await response.json()
-        console.log(wine)
-
-        return wine
-    } catch (err) {
-        console.log('error line 1 handleConnection(), connection.js')
-        console.log(err)
-    }
+    useEffect(() => {
+        const fetchData = async() => {
+            const baseurl = 'https://fairelepont.herokuapp.com'
+            try {
+                const response = await fetch(`${baseurl}${ext}`)
+                const result = await response.json()
+                const list = (result)
+                setWineList(list) 
+            } catch (error) {
+                console.log('err:', error)
+            }
+        }
+        fetchData()
+    }, [])
 }
-
-export default getWine

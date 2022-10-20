@@ -7,15 +7,15 @@ import winery from '../assets/img/winery.jpg'
 export default function Home() {
     return(
         <>
-            <div class='bannerContainer'>
-                <img class='banner' src={winery}/>
+            <div className='bannerContainer'>
+                <img className='banner' src={winery}/>
             </div>
 
-            <div class='content'>
-                <p class='header'>Welcome to</p>
+            <div className='content'>
+                <p className='header'>Welcome to</p>
                 {/* replace with img of titleText */}
-                <h1 class='title'>Chateau Faire Le Pont</h1>
-                <div class='textWall'>
+                <h1 className='title'>Chateau Faire Le Pont</h1>
+                <div className='textWall'>
                     <p>
                         Wine is often served with dinner. Young red wines may require several hours to aerate – if there's still any left. The classic profile of Cabernet Sauvignon tends to be full-bodied with high tannins and noticeable acidity that contributes to the wine's aging potential. Acidity is a key element in a wine's longevity. Bouquet refers to wine's aroma.
                     </p>
@@ -31,8 +31,8 @@ export default function Home() {
 
                 <img src={dougAndDeb}/>
 
-                <h1 class='header'>About Ourselves</h1>
-                <div class='textWall'>
+                <h1 className='header'>About Ourselves</h1>
+                <div className='textWall'>
                     <p>
                         Wine grapes grow almost exclusively between 30 and 50 degrees latitude north and south of the equator. The world's oldest bottle of wine is over 1600 years old and can be found at a museum in Germany. In California, the main stylistic difference in Cabernet Sauvignon is between hillside / mountain vineyards and those on flatter terrain like valley floors. The Romans named Sangiovese after the blood of Jupiter; that must have been some hangover. Rotten sémillon grapes are the secret to Sauternes.
                     </p>

@@ -5,14 +5,14 @@ import goldshire from '../assets/img/goldshire.jpg'
 export default function events() {
     return(
         <>
-            <div class='bannerContainer'>
-                <h1 class='bannerHead'>events</h1> 
+            <div className='bannerContainer'>
+                <h1 className='bannerHead'>events</h1> 
                 <img src={goldshire}/>
             </div>
 
-            <div class='content'>
-                <h1 class='title'>events</h1>
-                <div class='textWall'>
+            <div className='content'>
+                <h1 className='title'>events</h1>
+                <div className='textWall'>
                     <p>
                         Uncork that thing, decanter the contents. Chenin blanc boasts a bouquet of fresh pears, saffron, jasmine, ginger, and quince. Sangiovese – go ahead, pronounce it.
                     </p>
